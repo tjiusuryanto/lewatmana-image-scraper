@@ -28,6 +28,9 @@ var urls =	[
 							'http://lewatmana.com/cam/191/mt-haryono-pancoran',
 							'http://lewatmana.com/cam/248/alternatif-cibubur',
 							'http://lewatmana.com/cam/249/alternatif-cibubur-transyogi',
+							'http://lewatmana.com/cam/12/gatot-subroto-kuningan',
+							'http://lewatmana.com/cam/192/mt-haryono-cawang',
+							'http://lewatmana.com/cam/233/abdul-syafei-casablanca'
 						];
 /*******************************************/
 
@@ -47,7 +50,7 @@ var job = new cron({
 				  if(!error && body) {
 				    var $ = cheerio.load(body);
 
-				    var imageUrl = $('.cam-image').attr('src');
+				    var imageUrl = $('.cam-viewer-img').attr('src');
 				    var dirName;
 
 				  	if(imageUrl) {
